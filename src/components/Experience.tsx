@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { assetPath } from '@/lib/assets';
+
 
 export default function Experience() {
   const experiences = [
@@ -57,7 +59,7 @@ export default function Experience() {
 
                   <div className="flex items-center gap-3 sm:gap-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl p-2 flex items-center justify-center border border-black/5 shadow-md group-hover/card:scale-110 transition-transform duration-500 shrink-0">
-                      <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain" />
+                      <img src={assetPath(exp.logo)} alt={exp.company} className="w-full h-full object-contain" />
                     </div>
                     <div className="space-y-0.5 min-w-0">
                       <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold group-hover/card:text-black transition-colors leading-tight break-words">{exp.position}</h3>

@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { assetPath } from '@/lib/assets';
+
 
 export default function Education() {
   const education = [
@@ -30,7 +32,7 @@ export default function Education() {
              {/* Header */}
              <div className="flex justify-between items-start w-full">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-black/5 shadow-xl group-hover:scale-110 transition-transform duration-700 shrink-0">
-                  <img src={edu.logo} alt={edu.school} className="w-full h-full object-contain" />
+                  <img src={assetPath(edu.logo)} alt={edu.school} className="w-full h-full object-contain" />
                 </div>
                 <div className="text-right">
                    <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] font-black text-black mb-1">{edu.period}</p>

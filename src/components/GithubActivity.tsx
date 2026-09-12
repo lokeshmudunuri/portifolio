@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FolderGit2, Users, Flame, GitCommit, Calendar } from 'lucide-react';
+import { assetPath } from '@/lib/assets';
+
 
 interface GithubUser {
   public_repos: number;
@@ -54,7 +56,7 @@ export default function GithubActivity() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 sm:gap-8">
         <div className="flex items-center gap-4 sm:gap-6">
           <img
-            src={user.avatar_url}
+            src={assetPath(user.avatar_url)}
             alt="Mudunuri Lokesh Varma"
             className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl sm:rounded-3xl object-cover ring-1 ring-black/5 shadow-xl shrink-0"
           />

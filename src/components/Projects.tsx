@@ -2,7 +2,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, Code2 } from 'lucide-react';
+import { assetPath } from '@/lib/assets';
 import GithubActivity from './GithubActivity';
+
 
 export default function Projects() {
   const [filter, setFilter] = useState('All');
@@ -88,7 +90,7 @@ export default function Projects() {
                   {project.image ? (
                     <>
                       <img 
-                        src={project.image} 
+                        src={assetPath(project.image)} 
                         alt={project.title}
                         className="w-full h-full object-cover object-center grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                       />

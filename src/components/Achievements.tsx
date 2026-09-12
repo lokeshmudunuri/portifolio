@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { assetPath } from '@/lib/assets';
+
 
 export default function Achievements() {
   const achievements = [
@@ -29,7 +31,7 @@ export default function Achievements() {
           <div className="glass p-6 sm:p-10 md:p-12 rounded-[2rem] sm:rounded-[3.5rem] h-full hover-glow flex flex-col items-start transition-all duration-700">
             <div className="flex justify-between items-start w-full mb-6 sm:mb-10">
               <div className="w-14 h-14 sm:w-20 sm:h-20 bg-white rounded-2xl sm:rounded-3xl p-2.5 sm:p-4 flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent transition-all duration-500 shrink-0">
-                <img src={item.logo} alt={item.organization} className="w-full h-full object-contain" />
+                <img src={assetPath(item.logo)} alt={item.organization} className="w-full h-full object-contain" />
               </div>
               <span className="px-4 sm:px-6 py-1.5 sm:py-2 glass rounded-full text-[9px] sm:text-[10px] font-bold text-black group-hover:text-black transition-colors uppercase tracking-[0.2em]">
                 {item.date}

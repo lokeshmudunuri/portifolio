@@ -3,6 +3,8 @@
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 import { useRef } from 'react';
 import { Github, Linkedin } from 'lucide-react';
+import { assetPath } from '@/lib/assets';
+
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -174,7 +176,7 @@ export default function Hero() {
 
                     {/* Portrait */}
                     <img
-                      src="/profile.jpg"
+                      src={assetPath("/profile.jpg")}
                       alt="Mudunuri Lokesh Varma"
                       className="absolute inset-0 w-full h-full object-cover object-top grayscale-[10%] contrast-[1.05] scale-[1.03] group-hover:scale-100 group-hover:grayscale-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                     />

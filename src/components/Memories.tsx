@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ExternalLink, ArrowLeft } from 'lucide-react';
+import { assetPath } from '@/lib/assets';
+
 
 interface Moment {
   id: number;
@@ -93,7 +95,7 @@ export default function Memories() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {moment.images.map((img, i) => (
                 <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden glass border border-black/5 bg-zinc-100">
-                  <img src={img} alt={moment.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <img src={assetPath(img)} alt={moment.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
               ))}
             </div>
