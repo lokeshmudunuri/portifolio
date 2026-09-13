@@ -40,20 +40,20 @@ export default function Contact() {
       >
         <div className="space-y-10">
           <div className="flex items-center gap-4">
-             <div className="flex items-center gap-2 px-4 py-2 glass rounded-full ring-1 ring-black/5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[10px] font-black uppercase tracking-[0.2em]">Open for Opportunities</span>
+             <div className="flex items-center gap-2 px-4 py-2 glass rounded-full ring-1 ring-white/10">
+                <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse" />
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-lime-400">Open for Opportunities</span>
              </div>
-             <div className="h-px w-20 bg-black/10" />
+             <div className="h-px w-20 bg-white/10" />
           </div>
 
-          <h3 className="text-5xl md:text-7xl font-black tracking-[-0.05em] leading-[1] text-black mb-4">
+          <h3 className="text-5xl md:text-7xl font-black tracking-[-0.03em] leading-[1] text-white mb-4">
              LET&apos;S <br />
-             <span className="text-zinc-300">CONNECT</span>
+             <span className="text-neutral-400">CONNECT</span>
           </h3>
           
-          <p className="text-2xl md:text-3xl text-secondary max-w-xl font-medium leading-relaxed italic">
-            &quot;Interested in building practical full-stack and AI-powered applications. <span className="text-black font-bold">Let&apos;s discuss projects, ideas, and collaborations.</span>&quot;
+          <p className="text-2xl md:text-3xl text-neutral-300 max-w-xl font-medium leading-relaxed italic">
+            &quot;Interested in frontend engineering and exploring AI-powered workflows. <span className="text-lime-400 font-bold">Let&apos;s discuss projects, ideas, and collaborations.</span>&quot;
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export default function Contact() {
                 href={social.href} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="group flex items-center justify-center gap-2 px-5 py-3 glass rounded-full hover:bg-black hover:text-white transition-all duration-300"
+                className="group flex items-center justify-center gap-2 px-5 py-3 glass rounded-full hover:bg-lime-400 hover:text-black text-neutral-300 transition-all duration-300 border border-white/10"
               >
                 <social.icon className="w-4 h-4" />
                 <span className="text-[10px] uppercase tracking-[0.2em] font-bold">
@@ -83,16 +83,16 @@ export default function Contact() {
       <div className="lg:col-span-5 space-y-4">
         {contactItems.map((item) => {
           const Content = (
-            <div className="group glass p-6 md:p-8 rounded-[2rem] flex items-center justify-between hover-glow transition-all duration-500">
+            <div className="group glass p-6 md:p-8 rounded-[2rem] flex items-center justify-between hover-glow transition-all duration-500 border border-white/10 hover:border-lime-400/30">
               <div className="flex items-center gap-6">
-                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center group-hover:bg-black group-hover:text-white transition-colors duration-500 shrink-0">
+                <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-lime-400 group-hover:bg-lime-400 group-hover:text-black transition-colors duration-500 shrink-0 border border-white/10">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
-                  <p className="text-[10px] uppercase tracking-[0.25em] font-black text-zinc-400">
+                  <p className="text-[10px] uppercase tracking-[0.25em] font-black text-neutral-400">
                     {item.label}
                   </p>
-                  <p className="text-base sm:text-lg font-bold text-black group-hover:text-gradient transition-all break-all">
+                  <p className="text-base sm:text-lg font-bold text-white group-hover:text-lime-300 transition-all break-all">
                     {item.value}
                   </p>
                 </div>
@@ -104,11 +104,11 @@ export default function Contact() {
                     e.preventDefault();
                     copyToClipboard(item.copyValue!, item.label);
                   }}
-                  className="p-3 glass rounded-xl hover:bg-black hover:text-white transition-all duration-300 shrink-0"
+                  className="p-3 glass rounded-xl hover:bg-lime-400 hover:text-black text-neutral-300 transition-all duration-300 shrink-0 border border-white/10"
                   aria-label={"Copy " + item.label}
                 >
                   {copied === item.label ? (
-                    <Check className="w-4 h-4 text-emerald-500" />
+                    <Check className="w-4 h-4 text-lime-400" />
                   ) : (
                     <Copy className="w-4 h-4" />
                   )}

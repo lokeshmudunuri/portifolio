@@ -58,12 +58,12 @@ export default function Section({ id, children, className = '', title }: Section
             className="flex flex-col mb-20 space-y-4"
           >
              <div className="flex items-center gap-4">
-                <span className="text-black font-mono text-sm tracking-[0.3em] font-black">
+                <span className="text-lime-400 font-mono text-sm tracking-[0.3em] font-black">
                    [{sectionIndices[id.toLowerCase()] || 'XX'}]
                 </span>
-                <div className="h-px flex-grow bg-gradient-to-r from-black/20 to-transparent" />
+                <div className="h-px flex-grow bg-gradient-to-r from-lime-400/30 via-emerald-400/15 to-transparent" />
              </div>
-             <h2 className="heading-section !mb-0 text-gradient leading-none">
+             <h2 className="heading-section !mb-0 text-white leading-none">
                {title}
              </h2>
           </motion.div>

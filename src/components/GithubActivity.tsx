@@ -58,35 +58,35 @@ export default function GithubActivity() {
           <img
             src={assetPath(user.avatar_url)}
             alt="Mudunuri Lokesh Varma"
-            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl sm:rounded-3xl object-cover ring-1 ring-black/5 shadow-xl shrink-0"
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl sm:rounded-3xl object-cover ring-1 ring-white/10 shadow-xl shrink-0"
           />
 
           <div className="space-y-1.5 min-w-0">
             <div className="flex items-center gap-3 flex-wrap">
-              <h4 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight">Mudunuri Lokesh Varma</h4>
+              <h4 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight text-white">Mudunuri Lokesh Varma</h4>
               <a
                 href="https://github.com/lokeshmudunuri"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3.5 py-1 glass rounded-full text-[9px] uppercase font-black tracking-[0.2em] hover:bg-black hover:text-white transition-all duration-300"
+                className="px-3.5 py-1 glass rounded-full text-[9px] uppercase font-black tracking-[0.2em] hover:bg-lime-400 hover:text-black text-lime-400 transition-all duration-300 border border-white/10"
               >
                 View Profile
               </a>
             </div>
-            <p className="text-secondary text-xs sm:text-sm md:text-base opacity-70 max-w-md line-clamp-2 sm:line-clamp-none">
+            <p className="text-neutral-400 text-xs sm:text-sm md:text-base opacity-80 max-w-md line-clamp-2 sm:line-clamp-none">
               Third-year B.Tech student in AI & ML, developing practical software and intelligent systems.
             </p>
           </div>
         </div>
 
         {/* Quick stat tiles */}
-        <div className="flex justify-around sm:justify-end gap-6 sm:gap-8 pt-2 sm:pt-0 border-t sm:border-t-0 border-black/5">
+        <div className="flex justify-around sm:justify-end gap-6 sm:gap-8 pt-2 sm:pt-0 border-t sm:border-t-0 border-white/10">
           {stats.map((s) => (
             <div key={s.label} className="text-center min-w-[64px]">
-              <p className="text-2xl md:text-3xl font-black tracking-tight tabular-nums">
+              <p className="text-2xl md:text-3xl font-black tracking-tight tabular-nums text-white">
                 {s.value}
               </p>
-              <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-zinc-400 mt-1">
+              <p className="text-[9px] uppercase tracking-[0.2em] font-bold text-neutral-400 mt-1">
                 {s.label}
               </p>
             </div>
@@ -95,41 +95,41 @@ export default function GithubActivity() {
       </div>
 
       {/* Streak + Profile Views */}
-      <div className="flex flex-col lg:flex-row items-center gap-6 pt-2 border-t border-black/5">
+      <div className="flex flex-col lg:flex-row items-center gap-6 pt-2 border-t border-white/10">
         <div className="w-full lg:flex-1 pt-4 sm:pt-6 overflow-hidden flex justify-center">
           {!streakError ? (
             <img
-              src="https://github-readme-streak-stats-eight.vercel.app/?user=lokeshmudunuri&background=FFFFFF00&border=FFFFFF00&stroke=00000000&ring=16A34A&fire=16A34A&currStreakLabel=18181B&sideLabels=52525B&dates=A1A1AA&currStreakNum=000000&sideNums=000000&hide_border=true"
+              src="https://github-readme-streak-stats-eight.vercel.app/?user=lokeshmudunuri&background=FFFFFF00&border=FFFFFF00&stroke=00000000&ring=a3e635&fire=a3e635&currStreakLabel=f3f4f6&sideLabels=9ca3af&dates=6b7280&currStreakNum=ffffff&sideNums=ffffff&hide_border=true"
               alt="Mudunuri Lokesh Varma's GitHub streak stats"
               onError={() => setStreakError(true)}
               className="w-full max-w-[495px] h-auto object-contain mx-auto"
             />
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4 w-full">
-              <div className="glass p-5 rounded-2xl text-center space-y-1">
-                <GitCommit className="w-5 h-5 mx-auto text-emerald-600 mb-1" />
-                <p className="text-2xl font-black">Active</p>
-                <p className="text-[10px] uppercase tracking-wider font-bold text-secondary">Contributions</p>
-                <p className="text-[10px] text-zinc-400">Academic & Personal</p>
+              <div className="glass p-5 rounded-2xl text-center space-y-1 border border-white/10">
+                <GitCommit className="w-5 h-5 mx-auto text-lime-400 mb-1" />
+                <p className="text-2xl font-black text-white">Active</p>
+                <p className="text-[10px] uppercase tracking-wider font-bold text-neutral-400">Contributions</p>
+                <p className="text-[10px] text-neutral-500">Academic & Personal</p>
               </div>
-              <div className="glass p-5 rounded-2xl text-center space-y-1 ring-1 ring-emerald-500/20">
-                <Flame className="w-5 h-5 mx-auto text-emerald-500 mb-1" />
-                <p className="text-2xl font-black text-emerald-600">Active</p>
-                <p className="text-[10px] uppercase tracking-wider font-bold text-emerald-600">Current Streak</p>
-                <p className="text-[10px] text-zinc-400">Continuous Learning</p>
+              <div className="glass p-5 rounded-2xl text-center space-y-1 ring-1 ring-lime-400/30 border border-white/10">
+                <Flame className="w-5 h-5 mx-auto text-lime-400 mb-1" />
+                <p className="text-2xl font-black text-lime-400">Active</p>
+                <p className="text-[10px] uppercase tracking-wider font-bold text-lime-400">Current Streak</p>
+                <p className="text-[10px] text-neutral-500">Continuous Learning</p>
               </div>
-              <div className="glass p-5 rounded-2xl text-center space-y-1">
-                <Calendar className="w-5 h-5 mx-auto text-zinc-600 mb-1" />
-                <p className="text-2xl font-black">Consistent</p>
-                <p className="text-[10px] uppercase tracking-wider font-bold text-secondary">Commit Pace</p>
-                <p className="text-[10px] text-zinc-400">Project Development</p>
+              <div className="glass p-5 rounded-2xl text-center space-y-1 border border-white/10">
+                <Calendar className="w-5 h-5 mx-auto text-neutral-400 mb-1" />
+                <p className="text-2xl font-black text-white">Consistent</p>
+                <p className="text-[10px] uppercase tracking-wider font-bold text-neutral-400">Commit Pace</p>
+                <p className="text-[10px] text-neutral-500">Project Development</p>
               </div>
             </div>
           )}
         </div>
         <div className="pt-2 lg:pt-0 shrink-0">
           <img
-            src="https://komarev.com/ghpvc/?username=lokeshmudunuri&color=16a34a&style=flat&label=PROFILE+VIEWS"
+            src="https://komarev.com/ghpvc/?username=lokeshmudunuri&color=a3e635&style=flat&label=PROFILE+VIEWS"
             alt="Mudunuri Lokesh Varma's profile view count"
             className="h-6"
           />
@@ -137,18 +137,18 @@ export default function GithubActivity() {
       </div>
 
       {/* Contribution graph */}
-      <div className="pt-2 border-t border-black/5 space-y-3">
+      <div className="pt-2 border-t border-white/10 space-y-3">
         <div className="flex items-center justify-between">
-          <p className="text-[10px] uppercase tracking-[0.3em] font-black text-zinc-400 pt-3">
+          <p className="text-[10px] uppercase tracking-[0.3em] font-black text-neutral-400 pt-3">
             Contribution Graph
           </p>
-          <span className="text-[9px] uppercase tracking-wider text-zinc-400 sm:hidden pt-3 font-bold">
+          <span className="text-[9px] uppercase tracking-wider text-neutral-400 sm:hidden pt-3 font-bold">
             Swipe →
           </span>
         </div>
-        <div className="w-full overflow-x-auto no-scrollbar rounded-2xl bg-white/40 p-2 sm:p-4 border border-black/5">
+        <div className="w-full overflow-x-auto no-scrollbar rounded-2xl bg-black/40 p-2 sm:p-4 border border-white/10">
           <img
-            src="https://ghchart.rshah.org/16a34a/lokeshmudunuri"
+            src="https://ghchart.rshah.org/a3e635/lokeshmudunuri"
             alt="Mudunuri Lokesh Varma's GitHub contribution graph"
             className="w-full min-w-[550px] sm:min-w-0 h-auto object-contain"
           />

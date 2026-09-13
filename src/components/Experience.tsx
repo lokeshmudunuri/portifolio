@@ -31,7 +31,7 @@ export default function Experience() {
   return (
     <div className="relative">
       {/* Central timeline line */}
-      <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-black/10 to-transparent -translate-x-1/2" />
+      <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-lime-400/25 to-transparent -translate-x-1/2" />
 
       <div className="space-y-12 sm:space-y-24">
         {experiences.map((exp, index) => (
@@ -45,29 +45,29 @@ export default function Experience() {
           >
             {/* Content card */}
             <div className="w-full sm:w-[45%]">
-              <div className="glass p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] relative hover-glow transition-all duration-700 group/card">
+              <div className="glass p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] relative hover-glow transition-all duration-700 group/card hover:border-lime-400/30 border border-white/10">
                 
                 <div className="space-y-4 sm:space-y-6">
                   <div className="flex justify-between items-start gap-4">
-                    <span className="px-3.5 py-1 glass text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] rounded-full text-black">
+                    <span className="px-3.5 py-1 glass text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] rounded-full text-lime-400 border border-white/10">
                       {exp.period}
                     </span>
-                    <span className="text-[9px] sm:text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
+                    <span className="text-[9px] sm:text-[10px] font-bold text-neutral-400 uppercase tracking-widest">
                       {exp.location}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-3 sm:gap-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl p-2 flex items-center justify-center border border-black/5 shadow-md group-hover/card:scale-110 transition-transform duration-500 shrink-0">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black/80 rounded-xl p-2 flex items-center justify-center border border-white/10 shadow-md group-hover/card:scale-110 transition-transform duration-500 shrink-0">
                       <img src={assetPath(exp.logo)} alt={exp.company} className="w-full h-full object-contain" />
                     </div>
                     <div className="space-y-0.5 min-w-0">
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold group-hover/card:text-black transition-colors leading-tight break-words">{exp.position}</h3>
-                      <p className="text-accent text-[9px] sm:text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">{exp.company}</p>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white group-hover/card:text-lime-300 transition-colors leading-tight break-words">{exp.position}</h3>
+                      <p className="text-lime-400 text-[9px] sm:text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">{exp.company}</p>
                     </div>
                   </div>
                   
-                  <p className="text-secondary text-sm sm:text-base md:text-lg leading-relaxed opacity-80 italic group-hover/card:opacity-100 transition-opacity">
+                  <p className="text-neutral-300 text-sm sm:text-base md:text-lg leading-relaxed opacity-90 italic group-hover/card:opacity-100 transition-opacity">
                     &quot;{exp.description}&quot;
                   </p>
                   
@@ -75,7 +75,7 @@ export default function Experience() {
                     {exp.skills.map((skill, i) => (
                       <span 
                         key={i} 
-                        className="px-2.5 py-1 sm:px-4 sm:py-1.5 glass border-black/5 text-secondary text-[8px] sm:text-[9px] md:text-[10px] rounded-xl font-bold uppercase tracking-widest group-hover/card:text-black group-hover/card:border-black/30 transition-all font-sans"
+                        className="px-2.5 sm:px-3 py-1 glass text-[9px] sm:text-[10px] font-bold text-neutral-300 tracking-wider rounded-lg group-hover/card:text-white transition-colors border border-white/5"
                       >
                         {skill}
                       </span>

@@ -24,32 +24,20 @@ export default function Skills() {
       skills: ["HTML", "CSS", "React.js"]
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "Express.js"]
+      title: "AI & ML",
+      skills: ["Pandas", "Data Preprocessing"]
     },
     {
-      title: "Database",
-      skills: ["PostgreSQL", "MongoDB", "SQL"]
-    },
-    {
-      title: "AI/ML",
+      title: "AI Tools & Agents",
       skills: [
-        "NumPy",
-        "Pandas",
-        "Matplotlib",
-        "Scikit-learn",
-        "Machine Learning Fundamentals",
-        "Data Preprocessing",
-        "Model Training & Evaluation"
+        "Actively Learning Claude / AI-Assisted Workflows",
+        "Agentic AI (Basics) – Exploring Concepts Through AI Tools",
+        "AI Developer Tools"
       ]
     },
     {
       title: "Tools & Platforms",
       skills: ["Git", "GitHub"]
-    },
-    {
-      title: "Core Concepts",
-      skills: ["CRUD API Integration", "REST APIs", "Authentication"]
     }
   ];
 
@@ -64,7 +52,7 @@ export default function Skills() {
         <button
           onClick={() => setActiveCategory("All")}
           suppressHydrationWarning
-          className={"px-4 py-2.5 md:px-8 md:py-3.5 rounded-full md:rounded-[1.25rem] text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-[0.1em] md:tracking-[0.15em] transition-all duration-500 " + (activeCategory === "All" ? "bg-black text-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] scale-100 md:scale-105" : "glass text-secondary hover:text-black")}
+          className={"px-4 py-2.5 md:px-8 md:py-3.5 rounded-full md:rounded-[1.25rem] text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-[0.1em] md:tracking-[0.15em] transition-all duration-500 " + (activeCategory === "All" ? "bg-lime-400 text-black font-black shadow-[0_10px_30px_rgba(163,230,53,0.25)] scale-100 md:scale-105" : "glass text-neutral-300 hover:text-white border border-white/10")}
         >
           All
         </button>
@@ -73,7 +61,7 @@ export default function Skills() {
             key={category.title}
             onClick={() => setActiveCategory(category.title)}
             suppressHydrationWarning
-            className={"px-4 py-2.5 md:px-8 md:py-3.5 rounded-full md:rounded-[1.25rem] text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-[0.1em] md:tracking-[0.15em] transition-all duration-500 " + (activeCategory === category.title ? "bg-black text-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] scale-100 md:scale-105" : "glass text-secondary hover:text-black")}
+            className={"px-4 py-2.5 md:px-8 md:py-3.5 rounded-full md:rounded-[1.25rem] text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-[0.1em] md:tracking-[0.15em] transition-all duration-500 " + (activeCategory === category.title ? "bg-lime-400 text-black font-black shadow-[0_10px_30px_rgba(163,230,53,0.25)] scale-100 md:scale-105" : "glass text-neutral-300 hover:text-white border border-white/10")}
           >
             {category.title}
           </button>
@@ -97,10 +85,10 @@ export default function Skills() {
               }}
               whileHover={{ y: -4, scale: 1.02, transition: { duration: 0.2 } }}
               key={skill}
-              className="group h-[80px] glass rounded-2xl flex items-center justify-center px-6 py-4 cursor-default hover-glow relative overflow-hidden"
+              className="group min-h-[84px] glass rounded-2xl flex items-center justify-center px-4 py-3.5 cursor-default hover-glow relative overflow-hidden border border-white/10 hover:border-lime-400/30"
             >
-              <div className="absolute inset-0 bg-black/[0.01] opacity-0 group-hover:opacity-100 transition-opacity" />
-              <span className="relative z-10 text-[10px] sm:text-[11px] md:text-[13px] font-bold tracking-tight text-secondary group-hover:text-black transition-colors duration-300 text-center leading-tight px-1 md:px-2">
+              <div className="absolute inset-0 bg-lime-400/[0.04] opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span className="relative z-10 text-[10px] sm:text-[11px] md:text-[13px] font-bold tracking-tight text-neutral-300 group-hover:text-white transition-colors duration-300 text-center leading-tight px-1 md:px-2">
                 {skill}
               </span>
             </motion.div>

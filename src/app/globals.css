@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #000000;
-  --color-secondary: #52525b; /* Zinc 600 */
-  --color-accent: #18181b; /* Zinc 900 */
-  --color-accent-secondary: #3f3f46; /* Zinc 700 */
-  --color-background: #ffffff;
-  --color-border: rgba(0, 0, 0, 0.05);
-  --color-card: rgba(255, 255, 255, 0.8);
+  --color-primary: #0a0e0a;
+  --color-secondary: #9ca3af; /* Cool Gray 400 */
+  --color-accent: #a3e635; /* Lime 400 */
+  --color-accent-secondary: #4ade80; /* Green 400 */
+  --color-background: #090c09;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-card: rgba(14, 19, 14, 0.65);
   
   --font-sans: var(--font-inter), sans-serif;
-  --font-display: var(--font-jakarta), sans-serif;
+  --font-display: var(--font-sora), sans-serif;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #09090b;
-  --primary: #000000;
-  --secondary: #52525b;
-  --accent: #18181b;
-  --accent-secondary: #3f3f46;
-  --border: rgba(0, 0, 0, 0.05);
-  --glass-border: rgba(0, 0, 0, 0.03);
-  --muted: #fafafa;
+  --background: #090c09;
+  --foreground: #f3f4f6;
+  --primary: #ffffff;
+  --secondary: #9ca3af;
+  --accent: #a3e635;
+  --accent-secondary: #4ade80;
+  --border: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --muted: #111711;
 }
 
 @layer base {
@@ -36,7 +36,7 @@
   
   html {
     scroll-behavior: smooth;
-    @apply antialiased selection:bg-black selection:text-white;
+    @apply antialiased selection:bg-lime-400 selection:text-black;
   }
 
   body {
@@ -44,41 +44,41 @@
     color: var(--foreground);
     @apply font-sans;
     background-image: 
-      radial-gradient(at 0% 0%, rgba(0, 0, 0, 0.015) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(0, 0, 0, 0.01) 0px, transparent 50%);
+      radial-gradient(at 15% 15%, rgba(163, 230, 53, 0.04) 0px, transparent 45%),
+      radial-gradient(at 85% 85%, rgba(74, 222, 128, 0.025) 0px, transparent 45%);
     background-attachment: fixed;
   }
 
   h1, h2, h3, h4 {
-    @apply font-display tracking-[-0.05em] text-black;
+    @apply font-display tracking-[-0.03em] text-neutral-100;
     line-height: 0.95;
   }
 
   p {
-    @apply leading-[1.6] tracking-tight;
+    @apply leading-[1.6] tracking-tight text-neutral-300;
   }
 }
 
 @layer utilities {
   .glass {
     @apply backdrop-blur-2xl border transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)];
-    background: rgba(255, 255, 255, 0.65);
-    border-color: rgba(0, 0, 0, 0.04);
-    box-shadow: 0 4px 40px -10px rgba(0, 0, 0, 0.02);
+    background: rgba(15, 20, 15, 0.65);
+    border-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 4px 40px -10px rgba(0, 0, 0, 0.6);
   }
 
   .glass-dark {
-    @apply backdrop-blur-3xl border border-black/[0.03];
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: 0 20px 80px -20px rgba(0, 0, 0, 0.04);
+    @apply backdrop-blur-3xl border border-white/[0.08];
+    background: rgba(9, 12, 9, 0.96);
+    box-shadow: 0 20px 80px -20px rgba(0, 0, 0, 0.85);
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-black via-zinc-800 to-zinc-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-neutral-200 to-neutral-400;
   }
 
   .text-gradient-subtle {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-zinc-900 to-zinc-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 via-neutral-300 to-neutral-400;
   }
 
   .section-padding {
@@ -86,11 +86,11 @@
   }
 
   .heading-hero {
-    @apply text-5xl sm:text-7xl md:text-8xl lg:text-[140px] font-black tracking-[-0.07em] leading-[0.88] text-black;
+    @apply text-5xl sm:text-7xl md:text-8xl lg:text-[140px] font-black tracking-[-0.05em] leading-[0.88] text-white;
   }
 
   .heading-section {
-    @apply text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-[-0.06em] mb-12 sm:mb-20 text-black;
+    @apply text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-[-0.04em] mb-12 sm:mb-20 text-white;
   }
 
   .no-scrollbar::-webkit-scrollbar {

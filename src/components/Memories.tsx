@@ -60,16 +60,16 @@ export default function Memories() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="glass rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 space-y-8"
+            className="glass rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 space-y-8 border border-white/10 hover:border-sky-500/30"
           >
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="space-y-1">
-                <span className="px-3.5 py-1 glass text-[9px] uppercase tracking-[0.2em] font-black rounded-full text-black">
+                <span className="px-3.5 py-1 glass text-[9px] uppercase tracking-[0.2em] font-black rounded-full text-lime-400 border border-white/10">
                   {moment.tag}
                 </span>
-                <h3 className="text-2xl sm:text-4xl font-black tracking-tight pt-2">{moment.title}</h3>
+                <h3 className="text-2xl sm:text-4xl font-black tracking-tight pt-2 text-white">{moment.title}</h3>
                 {moment.meta && (
-                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-zinc-400">{moment.meta}</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-400">{moment.meta}</p>
                 )}
               </div>
               {moment.link && (
@@ -77,7 +77,7 @@ export default function Memories() {
                   href={moment.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-[10px] uppercase tracking-widest font-bold hover:scale-105 transition-all shadow-md"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-lime-400 text-black text-[10px] uppercase tracking-widest font-black hover:bg-lime-300 hover:scale-105 transition-all shadow-[0_4px_20px_rgba(163,230,53,0.25)]"
                 >
                   <span>{moment.linkLabel || 'View Details'}</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -86,7 +86,7 @@ export default function Memories() {
             </div>
 
             {moment.description && (
-              <p className="text-secondary text-base sm:text-lg leading-relaxed max-w-3xl">
+              <p className="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-3xl opacity-90">
                 {moment.description}
               </p>
             )}
@@ -94,7 +94,7 @@ export default function Memories() {
             {/* Images */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {moment.images.map((img, i) => (
-                <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden glass border border-black/5 bg-zinc-100">
+                <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden glass border border-white/10 bg-slate-900">
                   <img src={assetPath(img)} alt={moment.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
               ))}

@@ -53,9 +53,9 @@ export default function Hero() {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="inline-flex items-center gap-3 px-4 py-2 glass rounded-full"
               >
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary">
-                  AI & ML Engineering • Full Stack
+                <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse" />
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-lime-400">
+                  Frontend Developer • Aspiring AI & ML Engineer
                 </span>
               </motion.div>
 
@@ -64,9 +64,9 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               >
-                <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-display tracking-[-0.04em] leading-[0.9] text-black">
+                <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-display tracking-[-0.03em] leading-[0.9] text-white">
                   MUDUNURI <br />
-                  <span className="text-zinc-300">LOKESH VARMA</span>
+                  <span className="text-neutral-400">LOKESH VARMA</span>
                 </h1>
               </motion.div>
 
@@ -76,8 +76,8 @@ export default function Hero() {
                 transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="max-w-xl mx-auto lg:mx-0"
               >
-                <p className="text-lg sm:text-xl md:text-2xl text-secondary font-medium leading-relaxed">
-                  Third-year B.Tech student specializing in <span className="text-black font-semibold">Artificial Intelligence and Machine Learning</span>, building practical full-stack and AI-powered applications.
+                <p className="text-lg sm:text-xl md:text-2xl text-neutral-300 font-medium leading-relaxed">
+                  I am a <span className="text-lime-400 font-semibold">Frontend Developer</span> and an <span className="text-white font-semibold">aspiring AI & ML Engineer</span>, crafting responsive, modern web experiences and exploring intelligent data-driven applications.
                 </p>
               </motion.div>
 
@@ -96,7 +96,7 @@ export default function Hero() {
                       href={social.href} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="group flex items-center justify-center gap-2 px-5 py-2.5 glass rounded-full hover:bg-black hover:text-white transition-all duration-300"
+                      className="group flex items-center justify-center gap-2 px-5 py-2.5 glass rounded-full hover:bg-lime-400 hover:text-black text-neutral-300 transition-all duration-300 border border-white/10"
                     >
                       <social.icon className="w-4 h-4" />
                       <span className="text-[10px] uppercase tracking-[0.2em] font-bold">
@@ -115,18 +115,16 @@ export default function Hero() {
             >
               <a 
                 href="#projects" 
-                className="group relative px-10 py-5 bg-black text-white rounded-[2rem] font-bold overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl"
+                className="group relative px-10 py-5 bg-lime-400 text-black rounded-[2rem] font-black overflow-hidden transition-all hover:bg-lime-300 hover:scale-105 active:scale-95 shadow-[0_10px_35px_rgba(163,230,53,0.25)]"
               >
                 <span className="relative z-10 uppercase tracking-[0.2em] text-[10px]">My Projects</span>
-                <div className="absolute inset-x-0 bottom-0 h-0 bg-zinc-800 transition-all group-hover:h-full -z-0" />
               </a>
               
               <a 
                 href="#contact" 
-                className="group relative px-10 py-5 glass text-black rounded-[2rem] font-bold overflow-hidden transition-all hover:scale-105 active:scale-95 hover:shadow-2xl hover:text-white"
+                className="group relative px-10 py-5 glass text-neutral-200 rounded-[2rem] font-bold overflow-hidden transition-all hover:scale-105 active:scale-95 hover:shadow-2xl hover:text-white hover:border-lime-400/40 border border-white/10"
               >
                 <span className="relative z-10 uppercase tracking-[0.2em] text-[10px]">Contact</span>
-                <div className="absolute inset-x-0 bottom-0 h-0 bg-black transition-all group-hover:h-full -z-0" />
               </a>
             </motion.div>
 
@@ -142,7 +140,7 @@ export default function Hero() {
               ].map((chip) => (
                 <span
                   key={chip.label}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 glass rounded-full text-[10px] font-bold text-secondary tracking-wide border border-black/5 hover:border-black/20 hover:text-black transition-all"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 glass rounded-full text-[10px] font-bold text-neutral-300 tracking-wide border border-white/10 hover:border-lime-400/30 hover:text-white transition-all"
                 >
                   <span>{chip.icon}</span>
                   <span>{chip.label}</span>
@@ -165,12 +163,12 @@ export default function Hero() {
               style={{ rotateX: springTiltX, rotateY: springTiltY, transformPerspective: 1200 }}
               className="relative aspect-[4/5] w-full max-w-[500px] mx-auto group"
             >
-              <div className="absolute inset-0 rounded-[4rem] bg-zinc-100 p-px">
-                <div className="absolute inset-0 rounded-[4rem] bg-white shadow-2xl border border-black/[0.03]">
+              <div className="absolute inset-0 rounded-[4rem] bg-gradient-to-b from-sky-500/20 via-indigo-500/10 to-transparent p-px">
+                <div className="absolute inset-0 rounded-[4rem] bg-slate-900 shadow-2xl border border-white/10">
                   {/* Photo layer — clipped to the rounded frame */}
                   <div className="absolute inset-0 rounded-[4rem] overflow-hidden">
                     {/* Decorative Elements inside slot */}
-                    <div className="absolute top-0 right-0 p-12 opacity-[0.03] z-10 pointer-events-none">
+                    <div className="absolute top-0 right-0 p-12 opacity-[0.05] z-10 pointer-events-none text-white">
                       <span className="text-[120px] font-black leading-none uppercase select-none">MLV</span>
                     </div>
 
@@ -178,18 +176,18 @@ export default function Hero() {
                     <img
                       src={assetPath("/profile.jpg")}
                       alt="Mudunuri Lokesh Varma"
-                      className="absolute inset-0 w-full h-full object-cover object-top grayscale-[10%] contrast-[1.05] scale-[1.03] group-hover:scale-100 group-hover:grayscale-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+                      className="absolute inset-0 w-full h-full object-cover object-top contrast-[1.05] scale-[1.03] group-hover:scale-100 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/15" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20" />
 
                     {/* Status Pill */}
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 1, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                      className="absolute top-6 left-6 flex items-center gap-2 px-4 py-2 rounded-full shadow-xl backdrop-blur-xl bg-black/40 border border-white/10"
+                      className="absolute top-6 left-6 flex items-center gap-2 px-4 py-2 rounded-full shadow-xl backdrop-blur-xl bg-black/60 border border-white/15"
                     >
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse" />
                       <span className="text-[9px] uppercase tracking-[0.25em] font-black text-white">Open to Opportunities</span>
                     </motion.div>
 
@@ -203,11 +201,11 @@ export default function Hero() {
                   <motion.div
                     animate={{ x: [0, 5, 0], y: [0, -5, 0] }}
                     transition={{ duration: 4, repeat: Infinity }}
-                    className="absolute -bottom-6 -right-6 w-48 p-6 glass rounded-3xl shadow-2xl hidden md:block z-20"
+                    className="absolute -bottom-6 -right-6 w-52 p-6 glass rounded-3xl shadow-2xl hidden md:block z-20 border border-white/10"
                   >
                      <div className="space-y-3">
-                        <div className="h-1 w-8 bg-black rounded-full" />
-                        <p className="text-[10px] leading-relaxed font-bold">Currently Pursuing: <br /> <span className="text-zinc-400">AI & ML, Vishnu Institute of Technology</span></p>
+                        <div className="h-1 w-8 bg-lime-400 rounded-full" />
+                        <p className="text-[10px] leading-relaxed font-bold text-neutral-200">Currently Pursuing: <br /> <span className="text-lime-400">AI & ML, Vishnu Institute of Technology</span></p>
                      </div>
                   </motion.div>
                 </div>
@@ -223,8 +221,8 @@ export default function Hero() {
         style={{ opacity }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
       >
-        <div className="w-[1px] h-20 bg-gradient-to-b from-black to-transparent" />
-        <span className="text-[8px] uppercase tracking-[0.4em] font-black [writing-mode:vertical-lr]">Scroll</span>
+        <div className="w-[1px] h-20 bg-gradient-to-b from-lime-400 to-transparent" />
+        <span className="text-[8px] uppercase tracking-[0.4em] font-black [writing-mode:vertical-lr] text-neutral-400">Scroll</span>
       </motion.div>
     </div>
   );

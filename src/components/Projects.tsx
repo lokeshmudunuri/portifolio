@@ -63,7 +63,7 @@ export default function Projects() {
           <button
             key={cat}
             onClick={() => setFilter(cat)}
-            className={"px-4 py-2.5 md:px-8 md:py-3.5 rounded-full md:rounded-[1.25rem] text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-[0.1em] md:tracking-[0.15em] transition-all duration-500 " + (filter === cat ? 'bg-black text-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] scale-100 md:scale-105' : 'glass text-secondary hover:text-black')}
+            className={"px-4 py-2.5 md:px-8 md:py-3.5 rounded-full md:rounded-[1.25rem] text-[9px] sm:text-[10px] md:text-xs uppercase font-bold tracking-[0.1em] md:tracking-[0.15em] transition-all duration-500 " + (filter === cat ? 'bg-lime-400 text-black font-black shadow-[0_10px_30px_rgba(163,230,53,0.25)] scale-100 md:scale-105' : 'glass text-neutral-300 hover:text-white border border-white/10')}
           >
             {cat}
           </button>
@@ -83,34 +83,34 @@ export default function Projects() {
               key={project.id}
               className="group relative flex flex-col h-full"
             >
-              <div className="glass rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-7 flex flex-col justify-between h-full border border-black/5 hover-glow transition-all duration-700 overflow-hidden bg-white/40">
+              <div className="glass rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-7 flex flex-col justify-between h-full border border-white/10 hover-glow transition-all duration-700 overflow-hidden hover:border-lime-400/30">
                 
                 {/* Visual Header / Image Container */}
-                <div className="relative aspect-[16/10] w-full rounded-[1.5rem] sm:rounded-[1.75rem] overflow-hidden mb-6 bg-zinc-100/80 border border-black/5 flex-shrink-0">
+                <div className="relative aspect-[16/10] w-full rounded-[1.5rem] sm:rounded-[1.75rem] overflow-hidden mb-6 bg-black/60 border border-white/10 flex-shrink-0">
                   {project.image ? (
                     <>
                       <img 
                         src={assetPath(project.image)} 
                         alt={project.title}
-                        className="w-full h-full object-cover object-center grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        className="w-full h-full object-cover object-center grayscale-[10%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </>
                   ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center p-6 bg-gradient-to-br from-zinc-50 via-white to-zinc-100/70 relative select-none">
-                      <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-zinc-400 group-hover:text-black group-hover:scale-110 transition-all duration-500 shadow-sm border border-black/5 mb-2">
+                    <div className="w-full h-full flex flex-col items-center justify-center p-6 bg-gradient-to-br from-black/60 via-[#101510] to-black/80 relative select-none">
+                      <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-lime-400 group-hover:scale-110 transition-all duration-500 shadow-sm border border-white/10 mb-2">
                         <Code2 className="w-6 h-6 stroke-[1.5]" />
                       </div>
-                      <p className="text-[10px] uppercase tracking-[0.25em] font-black text-zinc-400 group-hover:text-zinc-600 transition-colors">
+                      <p className="text-[10px] uppercase tracking-[0.25em] font-black text-neutral-400 group-hover:text-lime-400 transition-colors">
                         Architecture & Context Engine
                       </p>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/[0.02] to-transparent pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/[0.2] to-transparent pointer-events-none" />
                     </div>
                   )}
                   
                   {/* Floating Category Badge inside image */}
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3.5 py-1.5 glass rounded-full text-[9px] uppercase tracking-[0.2em] font-black text-black backdrop-blur-md bg-white/80 border border-black/5 shadow-sm">
+                    <span className="px-3.5 py-1.5 glass rounded-full text-[9px] uppercase tracking-[0.2em] font-black text-lime-400 backdrop-blur-md bg-black/80 border border-white/10 shadow-sm">
                       {project.category}
                     </span>
                   </div>
@@ -120,23 +120,23 @@ export default function Projects() {
                 <div className="space-y-4 flex-grow flex flex-col justify-between">
                   <div>
                     <div className="flex items-start justify-between gap-4 mb-2">
-                      <h3 className="text-xl sm:text-2xl font-black tracking-tight group-hover:text-gradient transition-all duration-500 leading-snug">
+                      <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-lime-300 transition-all duration-500 leading-snug">
                         {project.title}
                       </h3>
                     </div>
                     
-                    <p className="text-secondary text-sm leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity line-clamp-3">
+                    <p className="text-neutral-300 text-sm leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity line-clamp-3">
                       {project.description}
                     </p>
                   </div>
 
                   {/* Tech Badges */}
-                  <div className="pt-4 border-t border-black/5 mt-auto">
+                  <div className="pt-4 border-t border-white/10 mt-auto">
                     <div className="flex flex-wrap gap-1.5 mb-5 min-h-[3.25rem]">
                       {project.technologies.map((tech) => (
                         <span 
                           key={tech}
-                          className="px-2.5 py-1 glass text-[9px] font-bold tracking-wider rounded-lg text-secondary group-hover:text-black transition-colors"
+                          className="px-2.5 py-1 glass text-[9px] font-bold tracking-wider rounded-lg text-neutral-300 group-hover:text-lime-400 transition-colors border border-white/5"
                         >
                           {tech}
                         </span>
@@ -150,13 +150,13 @@ export default function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-[10px] uppercase tracking-widest font-bold hover:scale-105 transition-all shadow-md"
+                          className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-lime-400 text-black text-[10px] uppercase tracking-widest font-black hover:bg-lime-300 hover:scale-105 transition-all shadow-[0_4px_20px_rgba(163,230,53,0.25)]"
                         >
                           <Github className="w-3.5 h-3.5" />
                           <span>Code</span>
                         </a>
                       ) : (
-                        <span className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-100 text-zinc-500 text-[10px] uppercase tracking-widest font-bold">
+                        <span className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 text-neutral-400 text-[10px] uppercase tracking-widest font-bold border border-white/10">
                           <Github className="w-3.5 h-3.5" />
                           <span>Concept Code</span>
                         </span>
