@@ -47,48 +47,50 @@ export default function About() {
   ];
 
   return (
-    <div className="space-y-32">
+    <div className="space-y-24 md:space-y-28">
       <motion.div 
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-5xl"
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-4xl"
       >
-        <div className="text-2xl md:text-4xl font-black leading-[1.1] tracking-tight text-secondary space-y-10">
-          <p>
-            I am a passionate <span className="text-black font-black">Frontend Developer</span> and an <span className="text-black font-black">aspiring AI & ML Engineer</span> currently pursuing my B.Tech at Vishnu Institute of Technology, with hands-on experience building modern, responsive web applications and AI-driven solutions.
+        <div className="space-y-6">
+          <p className="text-xl sm:text-2xl md:text-3xl font-semibold leading-snug tracking-tight text-neutral-100">
+            I am a passionate <span className="text-lime-400 font-bold">Frontend Developer</span> and an <span className="text-white font-bold">aspiring AI & ML Engineer</span> currently pursuing my B.Tech at <span className="text-neutral-200">Vishnu Institute of Technology</span>, with hands-on experience building modern, responsive web applications and AI-driven solutions.
           </p>
-          <p className="text-lg md:text-xl font-medium tracking-normal text-zinc-400 max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-400 font-normal max-w-3xl leading-relaxed">
             Focused on crafting intuitive user interfaces with React and modern web technologies, while actively learning to master AI tools like Claude, diving into the fundamentals of Agentic AI, and exploring data preprocessing with Python and Pandas.
           </p>
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
         {categories.map((cat, index) => (
           <motion.div 
             key={index} 
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="group p-8 md:p-12 glass rounded-3xl md:rounded-[3.5rem] hover-glow relative overflow-hidden flex flex-col items-start gap-6 md:gap-12 hover:border-lime-400/30 border border-white/10"
+            transition={{ delay: index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="group p-8 sm:p-10 glass rounded-3xl hover-glow relative overflow-hidden flex flex-col items-start gap-6 hover:border-lime-400/30 border border-white/10 transition-all duration-500"
           >
-             <div className="w-12 h-12 md:w-14 md:h-14 glass shrink-0 rounded-2xl flex items-center justify-center text-neutral-300 group-hover:bg-lime-400 group-hover:text-black transition-all duration-700 shadow-xl border border-white/10">
-                {cat.icon}
+             <div className="w-12 h-12 glass shrink-0 rounded-2xl flex items-center justify-center text-lime-400 group-hover:bg-lime-400 group-hover:text-black transition-all duration-500 shadow-lg border border-white/10">
+                <div className="w-6 h-6 flex items-center justify-center">
+                  {cat.icon}
+                </div>
              </div>
              
-             <div className="space-y-4 md:space-y-6">
-                <span className="inline-block px-4 md:px-5 py-1.5 md:py-2 glass text-[9px] md:text-[10px] uppercase font-black tracking-[0.3em] rounded-full text-lime-400 group-hover:text-white transition-colors border border-white/10">
+             <div className="space-y-4">
+                <span className="inline-block px-3.5 py-1 glass text-[9px] uppercase font-bold tracking-[0.25em] rounded-full text-lime-400 group-hover:text-white transition-colors border border-white/10">
                   {cat.tag}
                 </span>
                 
-                <div className="space-y-3 md:space-y-4">
-                  <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white group-hover:text-lime-300 transition-all duration-700">
+                <div className="space-y-2.5">
+                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white group-hover:text-lime-300 transition-colors duration-300">
                     {cat.title}
                   </h3>
-                  <p className="text-neutral-300 text-base md:text-xl font-medium leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                  <p className="text-neutral-300 text-sm sm:text-base font-normal leading-relaxed">
                     {cat.description}
                   </p>
                 </div>

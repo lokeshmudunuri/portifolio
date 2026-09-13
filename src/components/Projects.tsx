@@ -34,7 +34,7 @@ export default function Projects() {
       group: 'Software Development',
       description: 'A project concept to help developers understand unfamiliar or older codebases and improve productivity on existing projects. Uses AI assistance to explain code, understand project structure, and provide contextual guidance while developers work.',
       image: '',
-      github: 'https://github.com/lokeshmudunuri',
+      github: 'https://github.com/lokeshmudunuri/Dev-assistant-ai.git',
       demo: '#',
       technologies: ['Python', 'JavaScript', 'REST APIs', 'Git'],
     },
